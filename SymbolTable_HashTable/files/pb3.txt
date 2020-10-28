@@ -1,0 +1,16 @@
+	
+		define n int;
+		define aux int;
+		define i int;
+		define rez int;
+		
+		read n;
+		rez=0;
+		
+		for(i=0;i<n;i=i+1)
+		{
+			read aux;
+			rez=rez+aux;
+		}
+		
+		write rez;

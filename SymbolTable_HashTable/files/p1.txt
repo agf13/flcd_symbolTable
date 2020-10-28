@@ -1,0 +1,14 @@
+define rez int;
+define a int;
+define b int;
+read a;
+read b;
+rez=a+b;
+if(rez%2==0)
+{
+	write "EVEN";
+}
+else
+{
+	write "ODD";
+}

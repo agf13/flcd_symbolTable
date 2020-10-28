@@ -1,0 +1,16 @@
+		a+b;
+		define signedVar int;
+		signedVar = -12;
+		define a int;
+		define b int;
+		~define c bool;
+		define 1popVar int;
+		read a;
+		read b;
+		c=true;
+		signedVar = a+b;
+		if(b == a)
+		{
+			c=false;
+		}
+		write c;

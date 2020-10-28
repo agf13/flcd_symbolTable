@@ -1,0 +1,37 @@
+	
+	define a int;
+	define b int;
+	define c bool;
+	c=false;
+	read a;
+	read b;
+	if(a%2==0)
+	{
+		c=true;
+	}
+	if(c==true)
+	{
+		if(a>b)
+		{
+			write a;
+		}
+		else
+		{
+			write b;
+		}
+	}
+	else
+	{
+		if(a<b)
+		{
+			write a;
+		}
+		else if(a>b)
+		{
+			write b;
+		}
+		else
+		{
+			write b;
+		}
+	}
