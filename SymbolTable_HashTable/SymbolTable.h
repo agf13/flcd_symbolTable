@@ -25,9 +25,9 @@ public:
 		delete[] symbolTable;
 	}
 
-	int add(std::string symbol)
+	int add(std::string symbolName, std::string symbolValue)
 	{
-		int code = getCodeValue(symbol);
+		int code = getCodeValue(symbolName);
 		int index = hash(code);
 		while (!symbolTable[index].empty())
 		{
@@ -35,10 +35,30 @@ public:
 			if (index >= size)
 				index = 0;
 		}
-		symbolTable[index] = symbol;
+		symbolTable[index] = symbolValue;
+		return index;
+	}
+	int add(std::string symbolName)
+	{
+		int code = getCodeValue(symbolName);
+		int index = hash(code);
+		while (!symbolTable[index].empty())
+		{
+			index++;
+			if (index >= size)
+				index = 0;
+		}
+		symbolTable[index] = "";
 		return index;
 	}
 
+	void update(int index, std::string value)
+	{
+		symbolTable[index] = value;
+	}
+
+	//def: computes the ascii sum of the symbol string given. 
+	//out: the result should be used as argumnet in hash function to get the index from where to get/insert the element
 	int getCodeValue(std::string symbol)
 	{
 		int code = 0;
@@ -49,6 +69,9 @@ public:
 		return code;
 	}
 
+
+	//def: hash function to compute indexes for the ST
+	//in: code : int (preferably the argument is the result of getCodeValue(std:string)
 	int hash(int code)
 	{
 		return (code % size);
@@ -59,9 +82,14 @@ public:
 		return symbolTable[index];
 	}
 
+	unsigned int getSize()
+	{
+		return this->size;
+	}
+
 
 private:
-	int size;
+	unsigned int size;
 	std::string *symbolTable;
 		
 };

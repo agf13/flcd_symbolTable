@@ -71,6 +71,11 @@ public:
 		return elements[index];
 	}
 
+	unsigned int getSize()
+	{
+		return elements.size();
+	}
+
 private:
 	std::vector< PIFPair* > elements;
 };
