@@ -1,9 +1,15 @@
 define rez int;
 define a int;
 define b int;
+define c int;
+c = -14;
+c = +14;
+c = 'a';
+c = 'asd';
 read a;
 read b;
 rez=a+b;
+rez=a+12;
 if(rez%2==0)
 {
 	write "EVEN";

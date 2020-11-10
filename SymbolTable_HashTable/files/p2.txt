@@ -1,5 +1,5 @@
 	
-	define a int;
+	//define a int;
 	define b int;
 	define c bool;
 	c=false;
