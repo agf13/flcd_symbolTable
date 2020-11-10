@@ -57,9 +57,11 @@ public:
 		elements.push_back(newPair);
 	}
 
-	void add(PIFPair* newPair)
+	int add(PIFPair* newPair)
 	{
+		int index = this->elements.size();
 		elements.push_back(newPair);
+		return index;
 	}
 
 	PIFPair* get(int index)

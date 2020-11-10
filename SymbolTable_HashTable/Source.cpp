@@ -12,8 +12,8 @@ int main()
 	// /*
 	string programName = "p1.txt";
 	//string programName = "p1err.txt";
-	//string programName = "pb2.txt";
-	//string programName = "pb3.txt";
+	//string programName = "p2.txt";
+	//string programName = "p3.txt";
 	LexicalAnalyzer la(programName);
 	la.analyze();
 	// */
